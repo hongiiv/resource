@@ -1,14 +1,14 @@
 # Project information
 site_name: NGeneBio Help Center
-site_url: https://www.ngenebio.com/
+site_url: https://hongiiv.github.io/resource
 site_author: NGeneBio
 site_description: >-
   NGeneBio ("N-gen-bio") makes it easy to access your unique genetic information, so you can take control of your health
 
 # Repository
-repo_name: ngenebio/hgvs
+repo_name: ngenebio/resource
 
-repo_url: https://github.com/ngenebio/hgvs
+repo_url: https://github.com/ngenebio/resource
 edit_uri: ""
 
 # Copyright
