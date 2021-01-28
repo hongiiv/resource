@@ -1,0 +1,44 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+{% extends "overrides/main.html" %}
+{% block tabs %}
+  {{ super() }}
+  <style>.md-header{position:initial}.md-main__inner{margin:0}.md-content{display:none}@media screen and (min-width:60em){.md-sidebar--secondary{display:none}}@media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}</style>
+
+  <section class="tx-container">
+    <div class="md-grid md-typeset">
+      <div class="tx-hero">
+        <div class="tx-hero__image">
+          <div class="video-wrapper">
+            <figure class="tx-video" markdown="1">
+              <div class="tx-video__inner">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xrXxr2ehEfA?controls=1&autoplay=1&mute=1&showinfo=0&loop=1&fs=0&iv_load_policy=3&autohide:0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <figcaption markdown="1">
+
+            NGeneBio was founded in October 2015 as a joint venture between Genecurix and Korea Telecom, develops in vitro diagnostics (IVD) / companion diagnostics (CDx) products and bioinformatics software with cutting-of-edge technologies including next generation sequencing (NGS).
+
+              </figcaption>
+            </figure>            
+            <!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xrXxr2ehEfA?controls=1&autoplay=1&mute=1&showinfo=0&loop=1&fs=0&iv_load_policy=3&autohide:0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+          </div>
+          <!--<img src="https://www.illumina.com/content/dam/illumina-marketing/images/systems/v2/systems-carousel/system-carousel-miseq-right.png" alt="" draggable="false">-->
+          <!--<img src="https://cdni.iconscout.com/illustration/premium/thumb/programming-2245536-1889499.png" alt="" draggable="false">-->
+        </div>
+        <div class="tx-hero__content">
+          <h1>We make high-quality testing easy and affordable</h1>
+          <p>{{ config.site_description }}.</p>
+          <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
+            Find out more
+          </a>
+          <!--<a href="{{ 'insiders/' | url }}" title="Register a kit" class="md-button">
+            Register a kit
+          </a>-->
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}

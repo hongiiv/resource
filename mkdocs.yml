@@ -1,0 +1,194 @@
+# Project information
+site_name: NGeneBio Help Center
+site_url: https://www.ngenebio.com/
+site_author: NGeneBio
+site_description: >-
+  NGeneBio ("N-gen-bio") makes it easy to access your unique genetic information, so you can take control of your health
+
+# Repository
+repo_name: ngenebio/hgvs
+
+repo_url: https://github.com/ngenebio/hgvs
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2021 NGeneBio
+
+
+theme:
+  icon:
+    repo: fontawesome/brands/github-alt
+  name: material
+  custom_dir: overrides
+  # Static content
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: kr
+  features:
+    # - header.autohide
+    # - navigation.expand
+    # - navigation.instant
+    # - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - search.highlight
+    - search.share
+    - search.suggest
+    # - toc.integrate
+  palette:
+    - scheme: preference
+      primary: teal
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+  font:
+    text: Noto Sans KR
+    code: Monaco
+  favicon: assets/images/alpha-n-circle.svg
+  icon:
+    logo: material/alpha-n-circle
+
+# Plugins
+plugins:
+  - search
+  - redirects:
+      redirect_maps:
+        extensions/admonition.md: reference/admonitions.md
+        extensions/codehilite.md: reference/code-blocks.md
+        extensions/footnotes.md: reference/footnotes.md
+        extensions/metadata.md: reference/meta-tags.md
+        extensions/permalinks.md: setup/setting-up-navigation.md #permalink
+        extensions/pymdown.md: reference/admonitions.md
+        plugins/revision-date.md: setup/adding-a-git-repository.md #revision-date
+        plugins/search.md: setup/setting-up-site-search.md
+        releases/4.md: upgrading.md #upgrading-from-4x-to-5x
+        releases/5.md: upgrading.md #upgrading-from-3x-to-4x
+        releases/changelog.md: changelog.md
+        setup/adding-social-links.md: setup/setting-up-the-footer.md
+        sponsorship.md: insiders.md
+  - minify:
+      minify_html: true
+
+# Customization
+extra:
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: 한국어
+      link: /
+      lang: kr
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ngenebio
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/ngenebio
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/ngenebio/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCPwdgiY5UjyQsz6nlTKBimQ
+  version:
+    method: mike
+
+extra_css:
+  - stylesheets/extra.css
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid-experimental
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - Home: index.md
+  - Panels:
+    - Overview: panel.md
+    - 유방암&난소암 패널:
+      - BRCAaccuTest: brcaaccutest.md
+      - BRCAaccuTest Plus: brcaaccutest-plus.md
+    - 혈액암 패널: 
+      - HEMEaccuTest: heme-accutest.md
+    - 고형암 패널: 
+        - SOLIDaccuTest: solid-accutest.md
+    - 희귀유전질환 패널: 
+        - HEREDaccuTest: heread-accutest.md
+    - 조직적합항원 패널: 
+        - HLAaccuTest: hla-accutest.md
+  - Software Manual:
+    - ONCOaccuPanel:
+      - Overview: manual/oncoaccupanel/overview.md
+      - 로그인: manual/oncoaccupanel/login.md
+      - 신규분석요청: manual/oncoaccupanel/request.md
+      - 분석 진행 상태: manual/oncoaccupanel/status.md
+      - 분석 결과: manual/oncoaccupanel/result.md
+      - 리포트: manual/oncoaccupanel/report.md
+      - 리뷰: manual/oncoaccupanel/review.md
+      - 부록:
+        - Cancer type: manual/oncoaccupanel/cancer-type.md
+  - Software Changelog:
+    - Release Note: 
+      - v1.5.2: v1_5_2_0.md
+      - v1.5.1: v1_5_1_0.md
+      - v1.5.0: v1_5_0_0.md
+      - v1.4.4: v1_4_4_0.md
+      - v1.4.3: v1_4_3_0.md
+      - v1.4.2: v1_4_2_0.md
+      - v1.4.1: v1_4_1_0.md
+      - v1.4.0: v1_4_0_0.md
+      - v1.3.0: v1_3_3_0.md
+      - v1.2.0: v1_2_0_0.md   
+    - Future: future.md       
+# Google Analytics
+google_analytics:
+  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+  - auto
